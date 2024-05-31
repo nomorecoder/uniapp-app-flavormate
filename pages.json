@@ -1,9 +1,92 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path" : "pages/loading/loadingindex",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationBarBackgroundColor": "#8cd98f",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/loading/loading1",
+			"style": {
+				"navigationBarTitleText" : ""
+				// "navigationBarTitleText": "loading1"
+				// "navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/loading/loading2",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+				// "navigationBarTitleText" : "loading2",
+				// "navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/loading/check1",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/loading/check2",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path": "pages/loginANDregister/register",
+			"style": {
+				"navigationBarTitleText": "register",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/loginANDregister/login",
+			"style": {
+				"navigationBarTitleText": "login",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app x"
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/searchpage/searchpage",
+			"style": {
+				"navigationBarTitleText": "搜索页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/expertpage/expertpage",
+			"style": {
+				"navigationBarTitleText": "食谱专家",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/ownpage/ownpage",
+			"style": {
+				"navigationBarTitleText": "个人",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/loading/loading3",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
 			}
 		}
 	],

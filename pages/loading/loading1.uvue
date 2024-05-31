@@ -1,0 +1,79 @@
+<template>
+	<view class="content">
+		<image src="../../static/flavormate静态文件/loading/d79c7244977c2b410e0d0948e48c02d.png" mode="aspectFill"></image>
+		<view class="theshow">
+			<span>发现个性化食谱</span>
+			<text>告诉我们你的事物偏好，我们会为你策划美味的食谱</text>
+		</view>
+		<view class="btns">
+			<span>跳过</span>
+			<navigator url="/pages/loading/loading2" @click="tonext" class="btn">
+				<button>继续</button>
+			</navigator>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			tonext(){
+				uni.navigateTo({
+					url:"/pages/loading/loading2"
+				})
+			}
+		}
+	}
+</script>
+
+<style>
+.content {
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	width: 100%;
+}
+image{
+	width: 750rpx;
+	height: 1000rpx;
+}
+.theshow{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40rpx;
+}
+.theshow span{
+	font-size: 40rpx;
+	margin-bottom: 40rpx;
+}
+.theshow text{
+	font-size: 30rpx;
+}
+.btns{
+	margin-top: 150rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 300rpx;
+}
+.btns span{
+	color: #608a5f;
+}
+button{
+	background-color: #346932;
+	color: white;
+	border-radius: 50rpx;
+	padding-left: 50rpx;
+	padding-right: 50rpx;
+	line-height: 80rpx;
+	font-size: 26rpx;
+}
+</style>

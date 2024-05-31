@@ -1,0 +1,145 @@
+<template>
+	<view class="content">
+		<view class="header">
+			<span>你有节食吗 ？</span>
+			<text>我们只向你展示适合你的食谱</text>
+		</view>
+		<view class="checks">
+			<view class="checkitems">
+				<view class="checkitem">
+					<image src="../../static/flavormate静态文件/loading/b6d30da5bdf5bfb9270e3e6fcac4c504_.png" mode=""></image>
+					<span>偏爱蔬菜</span>
+				</view>
+				<view class="checkitem">
+					<image src="../../static/flavormate静态文件/loading/b6d30da5bdf5bfb9270e3e6fcac4c504_.png" mode=""></image>
+					<span>肉食者</span>
+				</view>
+			</view>
+			<view class="checkitems">
+				<view class="checkitem">
+					<image src="../../static/flavormate静态文件/loading/b6d30da5bdf5bfb9270e3e6fcac4c504_.png" mode=""></image>
+					<span>素食主义者</span>
+				</view>
+				<view class="checkitem">
+					<image src="../../static/flavormate静态文件/loading/b6d30da5bdf5bfb9270e3e6fcac4c504_.png" mode=""></image>
+					<span>奶制品</span>
+				</view>
+			</view>
+			<view class="checkitems">
+				<view class="checkitem">
+					<image src="../../static/flavormate静态文件/loading/b6d30da5bdf5bfb9270e3e6fcac4c504_.png" mode=""></image>
+					<span>低碳水食物</span>
+				</view>
+				<view class="checkitem">
+					<image src="../../static/flavormate静态文件/loading/b6d30da5bdf5bfb9270e3e6fcac4c504_.png" mode=""></image>
+					<span>海鲜</span>
+				</view>
+			</view>
+			<view class="checkitem">
+				<image src="../../static/flavormate静态文件/loading/b6d30da5bdf5bfb9270e3e6fcac4c504_.png" mode=""></image>
+				<span>菌类</span>
+			</view>
+		</view>
+		<view class="btns">
+			<span>跳过</span>
+			<navigator url="/pages/loading/check2" @click="tonext" class="btn">
+				<button>继续</button>
+			</navigator>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				tonext(){
+					uni.navigateTo({
+						url:"/pages/loading/check2"
+					})
+				}
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style scoped>
+.content{
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	height: 100%;
+}
+.header{
+	padding: 40rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header span{
+	font-size: 45rpx;
+}
+.header text{
+	margin-top: 40rpx;
+}
+.checks{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20rpx;
+	width: 100%;
+}
+image{
+	height: 100rpx;
+	width: 100rpx;
+}
+.checkitems{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 50rpx;
+}
+.checkitem {
+    display: flex;
+	flex-direction: row;
+    align-items: center;
+    /* padding-right: 50rpx; */
+    border-radius: 20rpx;
+    padding: 10rpx 60rpx;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
+	margin-bottom: 20rpx;
+	position: relative;
+}
+.checkitem:active{
+	box-shadow: 2px 5px 0px rgba(0, 0, 0, 0);
+	background-color: #e76c6a;
+	color: white;
+
+}
+.btns{
+	margin-top: 250rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 300rpx;
+}
+.btns span{
+	color: #608a5f;
+}
+button{
+	background-color: #346932;
+	color: white;
+	border-radius: 50rpx;
+	padding-left: 50rpx;
+	padding-right: 50rpx;
+	line-height: 80rpx;
+	font-size: 26rpx;
+}
+</style>
