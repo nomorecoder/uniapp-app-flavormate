@@ -1,5 +1,58 @@
 <template>
-	<view class="content">
+	<view class="continue">
+		<!-- 欢迎栏 -->
+		<view class="uni-flex welcome">
+			<view class="welcome-left">
+				<text class="white big">Hi,热爱美食的小{{surname}}同学</text>
+				<text class="white">让我们一起探索美食之旅吧!</text>
+			</view>
+			<view class="welcome-right">
+				<view class="circle" >
+					<img src="" alt="" />
+				</view>
+			</view>
+		</view>
+		<!-- 数据展示栏 -->
+		<view class="uni-flex datashow">
+			<view class="row">
+				<div class="box1">卡路里摄入</div>
+				<div><text class="uni-main-color">Veekly</text></div>
+			</view>
+			<view class="">
+				<img src="" alt="" />
+			</view>
+		</view>
+		<!-- 今日心情栏 -->
+		<view class="uni-flex moodshow">
+			<view class="row">
+				<div class="box1">
+					今日心情
+				</div>
+				<div class="emorow">
+					<!-- <img v-for="" :src="" alt="" /> -->
+				</div>
+			</view>
+		</view>
+		<!-- 美食烹饪栏 -->
+		<view class="uni-flex viewshow">
+			<view>
+				<div class="box2 uni-main-color">美食烹饪直播</div>
+				<div class="uni-extra-color">更多</div>
+			</view>
+			<div>
+				
+			</div>
+		</view>
+		<!-- 食材配送栏 -->
+		<view class="uni-flex foodshow">
+			<view>
+				<div class="box2 uni-main-color">智能食材配送</div>
+				<div class="uni-extra-color">更多</div>
+			</view>
+			<div>
+				
+			</div>
+		</view>
 	</view>
 </template>
 
@@ -7,7 +60,7 @@
 	export default {
 		data() {
 			return {
-				
+				surname:'张'
 			}
 		},
 		onLoad() {
@@ -19,22 +72,7 @@
 	}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-bottom: 50rpx;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+<style lang="scss">
+	@import "index.scss";
+	@import url("../../uni_modules/uni-scss/index.scss");
 </style>

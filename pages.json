@@ -96,5 +96,28 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
+	"tabBar": {
+		// "selectedColor": "#2b9939",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/logo.png",
+				"selectedIconPath": "static/logo.png"
+			},
+			{
+				"pagePath": "pages/index/searchpage/searchpage",
+				"text": "搜索"
+			},
+			{
+				"pagePath": "pages/index/expertpage/expertpage",
+				"text": "食谱"
+			},
+			{
+				"pagePath": "pages/index/ownpage/ownpage",
+				"text": "个人"
+			}
+		]
+	},
 	"uniIdRouter": {}
 }

@@ -16,7 +16,7 @@
 				<span>忘记密码?</span>
 			</view>
 			<view class="create">
-				<navigator url="/pages/index/index">
+				<navigator url="/pages/index/index" @click="index">
 					<button><span>登录</span></button>
 				</navigator>
 			</view>
@@ -40,7 +40,11 @@
 			}
 		},
 		methods: {
-			
+			index(){
+				uni.switchTab({
+					url:'/pages/index/index'
+				})
+			}
 		}
 	}
 </script>
