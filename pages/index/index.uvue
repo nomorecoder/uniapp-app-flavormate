@@ -40,6 +40,7 @@
 				<div class="uni-extra-color">更多</div>
 			</view>
 		</view>
+		<!-- 横向滑动 -->
 		<view class="scroll-container">
 		  <view class="scroll-view">
 		    <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
@@ -52,7 +53,12 @@
 				<div class="uni-extra-color">更多</div>
 			</view>
 		</view>
-		
+		<!-- 横向滑动 -->
+		<view class="scroll-container">
+		  <view class="scroll-view">
+		    <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
+		  </view>
+		</view>
 	</view>
 	
 </template>

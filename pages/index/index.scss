@@ -1,16 +1,17 @@
 .continue{
 	background-image: url(../../static/flavormate静态文件/main-interface/bgi-2.png);
 	background-size: cover;
-	height: 100%;
-	width: 100%;
+	// height: 100%;
+	// width: 100%;
 	display: flex;
 	flex-direction: column;
-	// justify-content: space-between;
-	// align-items: center;
+	justify-content: space-around;
+	align-items: center;
 }
 /* welcome */
 .welcome{
-	height: 20%;
+	width: 100%;
+	height: 170px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -45,7 +46,8 @@
 
 // datashow
 .datashow{
-	height: 20%;
+	width: 100%;
+	height: 200px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -69,7 +71,8 @@
 	background-color: #b6e5b9;
 }
 .moodshow{
-	height: 12%;
+	height: 150px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -85,6 +88,7 @@
 
 .viewshow {
 	height:50px;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -105,11 +109,11 @@
 }
 .foodshow{
 	height: 50px;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	// width: 90%;
 }
 .foodshow>.foodshow-1{
 	display: flex;
@@ -124,6 +128,9 @@
   width: 100%;
   border: 1px solid #ccc;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .scroll-view {

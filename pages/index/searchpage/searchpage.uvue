@@ -1,11 +1,10 @@
 <template>
-	<!-- #ifdef APP -->
-	<scroll-view style="flex:1">
-	<!-- #endif -->
-		
-	<!-- #ifdef APP -->
-	</scroll-view>
-	<!-- #endif -->
+	<view class="whole-continer">
+		<view>nihao1</view>
+		<view>hh1</view>
+		<view>1r2r</view>
+		<view>r234</view>
+	</view>
 </template>
 
 <script>
@@ -21,6 +20,13 @@
 	}
 </script>
 
-<style>
-
+<style lang='scss'>
+.whole-continer{
+	display:flex;
+	flex-direction:column;
+	justify-item:space-around ;
+}
+.whole-continer>view{
+	height: 400px;
+}
 </style>
