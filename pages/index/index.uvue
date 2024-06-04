@@ -7,7 +7,7 @@
 				<text class="white">让我们一起探索美食之旅吧!</text>
 			</view>
 			<view class="welcome-right">
-				<view class="circle" >
+				<view class="circle">
 					<img src="" alt="" />
 				</view>
 			</view>
@@ -39,35 +39,36 @@
 				<div class="box2 uni-main-color">美食烹饪直播</div>
 				<div class="uni-extra-color">更多</div>
 			</view>
-			<div>
-				
-			</div>
+		</view>
+		<view class="scroll-container">
+		  <view class="scroll-view">
+		    <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
+		  </view>
 		</view>
 		<!-- 食材配送栏 -->
 		<view class="uni-flex foodshow">
-			<view>
+			<view class="foodshow-1">
 				<div class="box2 uni-main-color">智能食材配送</div>
 				<div class="uni-extra-color">更多</div>
 			</view>
-			<div>
-				
-			</div>
 		</view>
+		
 	</view>
+	
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
-				surname:'张'
+				surname: '张',
+				items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-
 		}
 	}
 </script>
