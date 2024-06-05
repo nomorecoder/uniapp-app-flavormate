@@ -13,8 +13,7 @@
 			"path": "pages/loading/loading1",
 			"style": {
 				"navigationBarTitleText" : ""
-				// "navigationBarTitleText": "loading1"
-				// "navigationStyle": "custom"
+
 			}
 		},
 		{
@@ -22,8 +21,6 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : ""
-				// "navigationBarTitleText" : "loading2",
-				// "navigationStyle": "custom"
 			}
 		},
 		{
@@ -86,7 +83,9 @@
 			"path" : "pages/loading/loading3",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+				
 			}
 		}
 	],

@@ -7,7 +7,7 @@
 		</view>
 		<view class="btns">
 			<span>跳过</span>
-			<navigator url="/pages/loading/loading2" @click="tonext" class="btn">
+			<navigator url="/pages/loading/loading2" class="btn">
 				<button>继续</button>
 			</navigator>
 		</view>
@@ -22,11 +22,6 @@
 			}
 		},
 		methods: {
-			tonext(){
-				uni.navigateTo({
-					url:"/pages/loading/loading2"
-				})
-			}
 		}
 	}
 </script>

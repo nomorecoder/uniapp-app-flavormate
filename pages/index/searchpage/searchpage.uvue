@@ -1,11 +1,10 @@
 <template>
-	<!-- #ifdef APP -->
-	<scroll-view style="flex:1">
-	<!-- #endif -->
-		
-	<!-- #ifdef APP -->
-	</scroll-view>
-	<!-- #endif -->
+	<view class="content">
+		<view class="">
+			<span>搜索页面</span>
+		</view>
+		<navigatorfoot></navigatorfoot>
+	</view>
 </template>
 
 <script>
@@ -22,5 +21,10 @@
 </script>
 
 <style>
-
+.content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
 </style>
