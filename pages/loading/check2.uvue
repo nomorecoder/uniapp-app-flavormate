@@ -2,7 +2,7 @@
 	<view class="content">
 		<view class="header">
 			<span>你会避免哪些食材 ？</span>
-			<text>我们会注意你对食材过敏或不耐系情况</text>
+			<text>我们会注意你对食材过敏或不耐受情况</text>
 		</view>
 		<view class="checks">
 			<view class="checkitems">
@@ -58,7 +58,7 @@
 		</view>
 		<view class="btns">
 			<span>跳过</span>
-			<navigator url="/pages/loginANDregister/register" @click="tonext" class="btn">
+			<navigator  @click="tonext" class="btn">
 				<button>继续</button>
 			</navigator>
 		</view>

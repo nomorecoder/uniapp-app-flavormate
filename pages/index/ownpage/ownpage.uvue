@@ -3,7 +3,6 @@
 		<view class="">
 			<span>个人页面</span>
 		</view>
-		<navigatorfoot></navigatorfoot>
 	</view>
 </template>
 

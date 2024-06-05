@@ -43,6 +43,7 @@
 		<view class="btns">
 			<span>跳过</span>
 			<navigator url="/pages/loading/check2" class="btn">
+			<navigator  @click="tonext" class="btn">
 				<button>继续</button>
 			</navigator>
 		</view>

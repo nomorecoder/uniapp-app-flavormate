@@ -3,7 +3,12 @@
 		<view class="">
 			<span>搜索页面</span>
 		</view>
-		<navigatorfoot></navigatorfoot>
+		<view class="whole-continer">
+			<view>nihao1</view>
+			<view>hh1</view>
+			<view>1r2r</view>
+			<view>r234</view>
+		</view>
 	</view>
 </template>
 
@@ -20,11 +25,15 @@
 	}
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
+
+
+<style lang='scss'>
+.whole-continer{
+	display:flex;
+	flex-direction:column;
+	justify-item:space-around;
+}
+.whole-continer>view{
+	height: 400px;
 }
 </style>

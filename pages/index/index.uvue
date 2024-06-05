@@ -1,62 +1,85 @@
 <template>
-  <view class="content">
-	  <div class="maincontent">
-		  <view class="headContent">
-		  	<text>
-				<text class="contentHello">Hi,热爱美食的小张同学</text><br />
-				<text>让我们一起探索美食之旅吧!</text>
-			</text>
-			<view class="headContentOwnPhoto">
-				<image src="../../static/flavormate静态文件/index/首页图片/头像狗.jpg" mode=""></image>
+	<view class="continue">
+		<!-- 欢迎栏 -->
+		<view class="uni-flex welcome">
+			<view class="welcome-left">
+				<text class="white big">Hi,热爱美食的小{{surname}}同学</text>
+				<text class="white">让我们一起探索美食之旅吧!</text>
 			</view>
+			<view class="welcome-right">
+				<view class="circle">
+					<img src="" alt="" />
+				</view>
+			</view>
+		</view>
+		<!-- 数据展示栏 -->
+		<view class="uni-flex datashow">
+			<view class="row">
+				<div class="box1">卡路里摄入</div>
+				<div><text class="uni-main-color">Veekly</text></div>
+			</view>
+			<view class="">
+				<img src="" alt="" />
+			</view>
+		</view>
+		<!-- 今日心情栏 -->
+		<view class="uni-flex moodshow">
+			<view class="row">
+				<div class="box1">
+					今日心情
+				</div>
+				<div class="emorow">
+					<!-- <img v-for="" :src="" alt="" /> -->
+				</div>
+			</view>
+		</view>
+		<!-- 美食烹饪栏 -->
+		<view class="uni-flex viewshow">
+			<view>
+				<div class="box2 uni-main-color">美食烹饪直播</div>
+				<div class="uni-extra-color">更多</div>
+			</view>
+		</view>
+		<!-- 横向滑动 -->
+		<view class="scroll-container">
+		  <view class="scroll-view">
+		    <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
 		  </view>
-		  <view class="headnextContent">
-		  	
+		</view>
+		<!-- 食材配送栏 -->
+		<view class="uni-flex foodshow">
+			<view class="foodshow-1">
+				<div class="box2 uni-main-color">智能食材配送</div>
+				<div class="uni-extra-color">更多</div>
+			</view>
+		</view>
+		<!-- 横向滑动 -->
+		<view class="scroll-container">
+		  <view class="scroll-view">
+		    <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
 		  </view>
-	  </div>
-    <navigatorfoot></navigatorfoot>
-  </view>
+		</view>
+	</view>
+	
 </template>
 
 <script>
+	export default {
+		data() {
+			return {
+				surname: '张',
+				items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']
+			}
+		},
+		onLoad() {
 
-export default {
-	
-}
+		},
+		methods: {
+		}
+	}
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  height: 100vh; 
-  background-image: url('../../static/flavormate静态文件/组件/41.png');
-  background-repeat: no-repeat;
-  background-size: 180% 140%; 
-  background-position: center; 
-}
-.headContent{
-	margin-top: 40rpx;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	flex: 1;
-}
-.headContent text{
-	font-size: 35rpx;
-	color: rgb(254, 254, 254);
-}
-.contentHello{
-	font-size: 40rpx;
-	font-weight: 600;
-	margin-bottom: 20rpx;
-}
-.headContentOwnPhoto image{
-	width: 130rpx;
-	height: 130rpx;
-	border-radius: 50%;
-	margin-left: 80rpx;
-}
+<style lang="scss">
+	@import "index.scss";
+	@import url("../../uni_modules/uni-scss/index.scss");
 </style>

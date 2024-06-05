@@ -24,6 +24,15 @@
 			}
 		},
 		{
+			"path" : "pages/loading/loading3",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+				
+			}
+		},
+		{
 			"path" : "pages/loading/check1",
 			"style" : 
 			{
@@ -78,15 +87,6 @@
 				"navigationBarTitleText": "个人",
 				"navigationStyle": "custom"
 			}
-		},
-		{
-			"path" : "pages/loading/loading3",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"navigationStyle": "custom"
-				
-			}
 		}
 	],
 	"globalStyle": {
@@ -94,6 +94,35 @@
 		"navigationBarTitleText": "uni-app x",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		// "selectedColor": "#2b9939",
+		"height": "200rpx",
+		"iconWidth":"190rpx",
+		"borderStyle":"1px solid rgb(255,255,255)",
+		"backgroundColor": "#fff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "/static/flavormate静态文件/组件/33.png",
+				"selectedIconPath": "/static/flavormate静态文件/组件变绿/37.png"
+			},
+			{
+				"pagePath": "pages/index/searchpage/searchpage",
+				"iconPath": "/static/flavormate静态文件/组件/34.png",
+				"selectedIconPath": "/static/flavormate静态文件/组件变绿/38.png"
+			},
+			{
+				"pagePath": "pages/index/expertpage/expertpage",
+				"iconPath": "/static/flavormate静态文件/组件/35.png",
+				"selectedIconPath": "/static/flavormate静态文件/组件变绿/39.png"
+			},
+			{
+				"pagePath": "pages/index/ownpage/ownpage",
+				"iconPath": "/static/flavormate静态文件/组件/36.png",
+				"selectedIconPath": "/static/flavormate静态文件/组件变绿/40.png"
+			}
+		]
 	},
 	"uniIdRouter": {}
 }
