@@ -1,0 +1,105 @@
+<template>
+	<view class="continue">
+		<div class="box1">
+			<view class="center">
+				购物车
+			</view>
+			<navigator url="/pages/index/index" open-type="switchTab" >
+				<uni-icons class="center" type="home" size="40"></uni-icons>				
+			</navigator>
+			<!-- <navigator @click="tonext">
+				<uni-icons class="center" type="home" size="40"></uni-icons>
+			</navigator> -->
+		</div>
+		<div class="box2">
+			<!-- 左 -->
+			<view class="box2-left">
+				<img src="@/static/flavormate静态文件/index/index-img/totalCount/top.png" alt="" />
+			</view>
+			<!-- 右 -->
+			<view class="box2-right">
+				<view class="">
+					{{name}}
+				</view>
+				<view class="row">
+					数量：
+					<view class="">
+						{{num}}
+					</view>
+				</view>
+			</view>
+		</div>
+		<div class="box3">
+			<view class="card" v-for="item in list">
+				<view class="left">
+					<view class="pic">
+						<img :src="item.url" alt="" />
+					</view>
+					<view class="text">
+						<view class="color-black">{{item.name}}</view>
+						<view class="color-g">{{item.data}}</view>
+						<view class="color-black">{{item.price}}</view>
+					</view>
+				</view>
+				<view class="right">
+					<view class="count">
+						<div class="circle" @click="reduce(item)">-</div>
+						<div class="word2" >{{item.num}}</div>
+						<div class="circle" @click="add(item)">+</div>
+					</view>
+				</view>
+			</view>
+		</div>
+		<view class="none">
+			
+		</view>
+		<!-- 底部 -->
+		<view class="box4">
+			<view class="total">
+				总计：{{num}}
+			</view>
+			<navigator  >
+			<view class="box4-butten " >
+				去支付
+			</view>
+			</navigator>
+		</view>
+	</view>
+</template>
+
+<script>
+	import uniIcons from '@/uni_modules/uni-icons/components/uni-icons/uni-icons'
+	export default {
+		data() {
+			return {
+				name:'草莓燕麦宵夜',
+				num:133,
+				list:[
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/1.png',name:'燕麦麦片',data:'500g*2',price:'$312',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/2.png',name:'希腊酸奶',data:'85g',price:'￥25',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/3.png',name:'奇亚籽',data:'200g',price:'￥19',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/4.png',name:'生鲜奶',data:'1L',price:'￥29',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/5.png',name:'蜂蜜',data:'400g',price:'￥45',num:2},	
+					// {url:'/static/flavormate静态文件/index/index-img/totalCount/5.png',name:'蜂蜜',data:'400g',price:'￥45',num:2},
+				]
+			}
+		},
+		components:{
+			'uni-icons':uniIcons
+		},
+		methods: {
+			reduce(item){
+				if (item.num >= 1) {
+				        item.num -=1;
+				    }
+			},
+			add(item){
+				item.num += 1;
+			}
+		}
+	}
+</script>
+
+<style>
+@import url("totalCount.css");
+</style>

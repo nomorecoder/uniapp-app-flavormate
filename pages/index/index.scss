@@ -40,7 +40,8 @@
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: red;
+	// background-color: red;
+	// background-size: cover;
 }
 
 
@@ -53,12 +54,23 @@
 	align-items: center;
 	justify-content: space-between;
 }
+.datashow-img{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+.datashow-img>img{
+	// height: 200px;
+	width: 90%;
+}
 .row{
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 	width: 85%;
 }
+
 .box1{
 	width: 140px;
 	height: 40px;
@@ -76,15 +88,18 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .emorow{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	width: 90%;
 }
-
+.emorow>img{
+	height: 40px;
+}
 
 .viewshow {
 	height:50px;
@@ -148,4 +163,11 @@
   background-color: #f0f0f0;
   text-align: center;
   line-height: 150px;
+}
+scroll-view{
+	white-space: nowrap;
+	// display: flex;
+	// flex-wrap: nowrap;
+	// width: 90%;
+	// width: 500px;
 }

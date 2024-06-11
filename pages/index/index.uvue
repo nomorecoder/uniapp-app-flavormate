@@ -8,7 +8,7 @@
 			</view>
 			<view class="welcome-right">
 				<view class="circle">
-					<img src="" alt="" />
+					<img src="@/static/flavormate静态文件/index/index-img/user.png" alt="" />
 				</view>
 			</view>
 		</view>
@@ -16,10 +16,10 @@
 		<view class="uni-flex datashow">
 			<view class="row">
 				<div class="box1">卡路里摄入</div>
-				<div><text class="uni-main-color">Veekly</text></div>
+				<!-- <div><text class="uni-main-color">Veekly</text></div> -->
 			</view>
-			<view class="">
-				<img src="" alt="" />
+			<view class="datashow-img">
+				<img src="@/static/flavormate静态文件/index/index-img/datashow.png" alt="" />
 			</view>
 		</view>
 		<!-- 今日心情栏 -->
@@ -28,10 +28,17 @@
 				<div class="box1">
 					今日心情
 				</div>
-				<div class="emorow">
-					<!-- <img v-for="" :src="" alt="" /> -->
-				</div>
 			</view>
+			<div class="emorow">
+					<!-- <img v-for="item in emolist" src="item" alt="" /> -->
+					<img src="@/static/flavormate静态文件/index/index-img/emos/1.png" alt="" />
+					<img src="@/static/flavormate静态文件/index/index-img/emos/2.png" alt="" />
+					<img src="@/static/flavormate静态文件/index/index-img/emos/3.png" alt="" />
+					<img src="@/static/flavormate静态文件/index/index-img/emos/4.png" alt="" />
+					<img src="@/static/flavormate静态文件/index/index-img/emos/5.png" alt="" />
+					<img src="@/static/flavormate静态文件/index/index-img/emos/6.png" alt="" />
+			</div>
+			
 		</view>
 		<!-- 美食烹饪栏 -->
 		<view class="uni-flex viewshow">
@@ -42,15 +49,16 @@
 		</view>
 		<!-- 横向滑动 -->
 		<view class="scroll-container">
-		  <view class="scroll-view">
-		    <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
-		  </view>
+		  <scroll-view scroll-x="true">
+			  <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
+		  </scroll-view>
 		</view>
+		
 		<!-- 食材配送栏 -->
 		<view class="uni-flex foodshow">
 			<view class="foodshow-1">
 				<div class="box2 uni-main-color">智能食材配送</div>
-				<div class="uni-extra-color">更多</div>
+				<div class="uni-extra-color" @click="tonext">更多</div>
 			</view>
 		</view>
 		<!-- 横向滑动 -->
@@ -68,13 +76,26 @@
 		data() {
 			return {
 				surname: '张',
-				items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']
+				items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+				// emolist:[
+				// 	'@/static/flavormate静态文件/index/index-img/emos/1.png',
+				// 	'@/static/flavormate静态文件/index/index-img/emos/2.png',
+				// 	'@/static/flavormate静态文件/index/index-img/emos/3.png',
+				// 	'@/static/flavormate静态文件/index/index-img/emos/4.png',
+				// 	'@/static/flavormate静态文件/index/index-img/emos/5.png',
+				// 	'@/static/flavormate静态文件/index/index-img/emos/6.png'
+				// ]
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
+			tonext(){
+				uni.navigateTo({
+					url:"/pages/individual/creatMenu/creatMenu"
+				})
+			}
 		}
 	}
 </script>

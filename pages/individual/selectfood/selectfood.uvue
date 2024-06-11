@@ -1,0 +1,125 @@
+<template>
+	
+	<view class="continue">
+		<div class="box1">
+			<view class="text">
+				草莓燕麦宵夜
+			</view>
+			<view class="text2">
+				<view class="">
+					简单
+				</view>
+				<view class="line">
+					15min
+				</view>
+			</view>
+		</div>
+		<div class="box2">
+			<!-- 第一部分 -->
+			<view class="box2-top">
+				<view >营养成分</view>
+				<view >查看全部</view>
+			</view>
+			<!-- 第二部分 -->
+			<view class="box2-second">
+				<view class="big">
+					卡路里
+					<view class="num">230</view>
+				</view>
+				<view class="big line">
+					碳水化合物
+					<view class="num">40g</view>
+				</view>
+				<view class="small line">
+					脂肪
+					<view class="num">5g</view>
+				</view>
+				<view class="small line">
+					纤维
+					<view class="num">6g</view>
+				</view>
+			</view>
+			<!-- 第三部分 -->
+			<view class="box2-third ">
+				<view>
+					食材
+				</view>
+				<view class="count">
+					<div class="circle" @click="reduce">-</div>
+					<div class="word">Serves</div>
+					<div class="word2" >{{num}}</div>
+					<div class="circle" @click="add">+</div>
+				</view>
+			</view>
+			<!-- 第四部分 -->
+			<view class="box2-forth">
+				<!-- 一行 -->
+				<view class="box2-forth-box" v-for="item in list" >
+					<view class="one-box">
+						<!-- 一图 -->
+						<view class="circle-change ">
+							<img :src="item.url" alt="" />
+						</view>
+						<!-- 一字 -->
+						<view class="middle">
+							{{item.name}}
+						</view>
+					</view>
+					<!-- 一数据 -->
+					<view class="middle">
+						{{item.data}}
+					</view>
+					
+				</view>
+			</view>
+		</div>
+		<view class="box4">
+			
+		</view>
+		<!--第三部分 -->
+		<view class="box3">
+			<navigator url="../totalCount/totalCount" >
+			<view class="box3-butten " >
+				购买食材
+			</view>
+			</navigator>
+		</view>
+			<!-- <uni-nav-bar title="导航栏组件" height="20px" right-icon="cart"></uni-nav-bar> -->
+		
+	</view>
+	
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				num:1,
+				list:[
+					{url:'/static/flavormate静态文件/index/index-img/selectfood/9.png',name:'奇亚籽',data:'3g'},
+					{url:'/static/flavormate静态文件/index/index-img/selectfood/10.png',name:'奶',data:'200ml'},
+					{url:'/static/flavormate静态文件/index/index-img/selectfood/11.png',name:'燕麦片',data:'1杯'},
+					{url:'/static/flavormate静态文件/index/index-img/selectfood/12.png',name:'酸奶',data:'30ml'},
+					{url:'/static/flavormate静态文件/index/index-img/selectfood/13.png',name:'蜂蜜',data:'1勺'},
+					{url:'/static/flavormate静态文件/index/index-img/selectfood/14.png',name:'杏仁',data:'1勺'},
+					{url:'/static/flavormate静态文件/index/index-img/selectfood/15.png',name:'草莓',data:'10个'},
+				]
+			}
+		},
+		methods: {
+			reduce(){
+				if (this.num >= 1) {
+				        this.num -=1;
+				    }
+			},
+			add(){
+				this.num += 1;
+			}
+		}
+	}
+</script>
+
+<style>
+	@import url("./selectfood.css");
+	/* @import url("@/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar.vue"); */
+</style>

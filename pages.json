@@ -87,6 +87,55 @@
 				"navigationBarTitleText": "个人",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/individual/video/video",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/individual/totalCount/totalCount",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/individual/selectfood/selectfood",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/individual/privateMenu/privateMenu",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/individual/creatMenu/creatMenu",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/expertpage-individual/expert-page/expert-page",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/ownpage-individual/my-smart-kitchen/my-smart-kitchen",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 	],
 	"globalStyle": {
@@ -97,7 +146,7 @@
 	},
 	"tabBar": {
 		// "selectedColor": "#2b9939",
-		"height": "200rpx",
+		// "height": "190rpx",
 		"iconWidth":"190rpx",
 		"borderStyle":"1px solid rgb(255,255,255)",
 		"backgroundColor": "#fff",
