@@ -49,9 +49,32 @@
 		</view>
 		<!-- 横向滑动 -->
 		<view class="scroll-container">
-		  <scroll-view scroll-x="true">
-			  <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
-		  </scroll-view>
+		  <view class="scroll-view">
+		    <view v-for="(item, index) in items" :key="index" class="scroll-box">
+				<img :src="item.url" alt="" />
+				<view class="img-button">
+					<view class="img-left">
+						<view class="circle">
+							<img src="@/static/flavormate静态文件/index/index-img/user.png" alt="" />
+						</view>
+						<view class="box-inimg">
+							<view class="img-name">
+								你好
+							</view>
+							<view class="data">
+								我好
+							</view>
+						</view>
+					</view>
+					
+					<view class="">
+						<button class="btn">
+							Join live
+						</button>
+					</view>
+				</view>
+			</view>
+		  </view>
 		</view>
 		
 		<!-- 食材配送栏 -->
@@ -64,7 +87,17 @@
 		<!-- 横向滑动 -->
 		<view class="scroll-container">
 		  <view class="scroll-view">
-		    <view v-for="(item, index) in items" :key="index" class="scroll-box">{{ item }}</view>
+		    <view v-for="(item, index) in foods" :key="index" class=" box-change">
+				<navigator url="../individual/selectfood/selectfood">
+					<view class="last">
+						<img :src="item.url" alt="" />
+					</view>	
+				</navigator>
+				<view class="img-text">
+					{{item.name}}
+				</view>
+			</view>
+			
 		  </view>
 		</view>
 	</view>
@@ -76,15 +109,18 @@
 		data() {
 			return {
 				surname: '张',
-				items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
-				// emolist:[
-				// 	'@/static/flavormate静态文件/index/index-img/emos/1.png',
-				// 	'@/static/flavormate静态文件/index/index-img/emos/2.png',
-				// 	'@/static/flavormate静态文件/index/index-img/emos/3.png',
-				// 	'@/static/flavormate静态文件/index/index-img/emos/4.png',
-				// 	'@/static/flavormate静态文件/index/index-img/emos/5.png',
-				// 	'@/static/flavormate静态文件/index/index-img/emos/6.png'
-				// ]
+				items: [
+					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
+					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
+					// {url:'/static/flavormate静态文件/index/index-img/01.png'},
+				],
+				foods: [
+					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
+					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
+					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
+					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
+					// {url:'/static/flavormate静态文件/index/index-img/01.png'},
+				],
 			}
 		},
 		onLoad() {

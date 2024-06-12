@@ -62,6 +62,7 @@
 }
 .datashow-img>img{
 	// height: 200px;
+	height: 100%;
 	width: 90%;
 }
 .row{
@@ -151,23 +152,112 @@
 .scroll-view {
   height: 150px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   overflow-x: scroll;
+  // overflow-y: scroll;
   white-space: nowrap;
+  // background-color: red;
 }
 
 .scroll-box {
   height: 150px;
   width: 300px;
-  display: inline-block;
-  margin-right: 10px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  
+  // margin-right: 10px;
   background-color: #f0f0f0;
   text-align: center;
   line-height: 150px;
+  margin: 0px 15px;
 }
-scroll-view{
-	white-space: nowrap;
-	// display: flex;
-	// flex-wrap: nowrap;
-	// width: 90%;
-	// width: 500px;
+.scroll-box>img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	  
+}
+.img-button{
+	height: 45%;
+	width: 100%;
+	// height: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 10px;
+}
+.box-inimg{
+	height:50px;
+	width: 100px;
+	// background-color: yellow;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.btn{
+	height: 40px;
+	width: 90px;
+	background-color: seagreen;
+	border-radius: 20px;
+	color: #f0f0f0;
+	font-size: 14px;
+	line-height: 40px;
+}
+.img-left{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	width: 60%;
+	justify-content: space-around;
+	
+}
+.img-name{
+	height: 20px;
+	color: black;
+	font-size: 20px;
+	background-color: red;
+	
+}
+.data{
+	height: 20px;
+	background-color: blue;
+	
+}
+.box-change{
+	width: 100px;
+	height: 140px;
+	// border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0px 10px;
+}
+.last{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: 100px;
+}
+.last>img{
+	width: 80%;
+	height: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.img-text{
+	font-size: 12px;
+	width: 100px;
+	overflow: visible;
 }
