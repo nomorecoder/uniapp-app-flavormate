@@ -136,6 +136,27 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/individual/smart-recipe/smart-recipe",
+			
+			"style" : 
+			{
+				"navigationBarTitleText" : "智能菜谱",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"text": "...",
+								"fontSize": "30",
+								"float": "right",
+								"color": "#101010"
+								
+							}
+						]
+					}
+				}
+			}
 		}
 	],
 	"globalStyle": {

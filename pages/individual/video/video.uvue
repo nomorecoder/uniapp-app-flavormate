@@ -1,11 +1,7 @@
 <template>
-	<!-- #ifdef APP -->
-	<scroll-view style="flex:1">
-	<!-- #endif -->
-		
-	<!-- #ifdef APP -->
-	</scroll-view>
-	<!-- #endif -->
+	<view class="container">
+		<img src="@/static/flavormate静态文件/index/index-img/video/bgi.png" alt="" />
+	</view>
 </template>
 
 <script>
@@ -22,5 +18,12 @@
 </script>
 
 <style>
-
+.container{
+	height: 100%;
+	background-color: black;
+}
+.container>img{
+	border-radius: 70px;
+	
+}
 </style>

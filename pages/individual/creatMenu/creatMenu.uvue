@@ -29,9 +29,11 @@
 			{{name}}
 		</view>
 		<view class="sixth">
-			<button class="bottom-btn">
-				创建菜单
-			</button>
+			<navigator url="/pages/individual/smart-recipe/smart-recipe">
+				<button class="bottom-btn">
+					创建菜单
+				</button>
+			</navigator>
 		</view>
 	</view>
 </template>
