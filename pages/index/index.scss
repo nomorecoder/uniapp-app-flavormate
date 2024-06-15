@@ -184,7 +184,7 @@
 	position: absolute;
 	  
 }
-.img-button{
+.img-buttom{
 	height: 45%;
 	width: 100%;
 	// height: 30%;
@@ -193,15 +193,17 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0px 10px;
+	overflow: visible;
 }
-.box-inimg{
-	height:50px;
-	width: 100px;
-	// background-color: yellow;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
+// .box-inimg{
+// 	height:50px;
+// 	width: 100px;
+// 	// background-color: yellow;
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: space-around;
+// 	overflow: visible;
+// }
 .btn{
 	height: 40px;
 	width: 90px;
@@ -218,19 +220,41 @@
 	height: 100%;
 	width: 60%;
 	justify-content: space-around;
+	overflow: visible;
+}
+// .img-name{
+// 	height: 20px;
+// 	color: black;
+// 	font-size: 20px;
+// 	// background-color: red;
+// 	overflow: visible;
+	
+// }
+// .data{
+// 	height: 20px;
+// 	// background-color: blue;
+// 	overflow: visible;
+	
+// }
+.chr-box{
+	display: flex;
+	flex-direction: column;
+	// height: 100px;
+	// border-style: solid;
+	// border-color: black;overflow: visible;
+	height: 80%;
+	justify-content: space-around;
 	
 }
-.img-name{
+.chr-box-item-1{
 	height: 20px;
-	color: black;
-	font-size: 20px;
-	background-color: red;
-	
+	    line-height: 20px;
+		color: white;
 }
-.data{
+.chr-box-item-2{
 	height: 20px;
-	background-color: blue;
-	
+	    line-height: 20px;
+		color: #c7c9ce;
 }
 .box-change{
 	width: 100px;

@@ -52,25 +52,23 @@
 		  <view class="scroll-view">
 		    <view v-for="(item, index) in items" :key="index" class="scroll-box">
 				<img :src="item.url" alt="" />
-				<view class="img-button">
+				<view class="img-buttom">
 					<view class="img-left">
 						<view class="circle">
 							<img src="@/static/flavormate静态文件/index/index-img/user.png" alt="" />
 						</view>
-						<view class="box-inimg">
-							<view class="img-name">
-								你好
-							</view>
-							<view class="data">
-								我好
-							</view>
+						<view class="chr-box">
+							<view class="chr-box-item-1">{{item.name}}</view>
+							<view class="chr-box-item-2">{{item.data}} recipe</view>
 						</view>
 					</view>
 					
 					<view class="">
-						<button class="btn">
-							Join live
-						</button>
+						<navigator animation-type="slide-in-bottom" animation-duration="800" url="../individual/video/video">
+							<button class="btn" >
+								Join live
+							</button>
+						</navigator>
 					</view>
 				</view>
 			</view>
@@ -112,6 +110,7 @@
 				items: [
 					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
 					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
+					{url:'/static/flavormate静态文件/index/index-img/01.png',name:"Dimpol Arora",data:224},
 					// {url:'/static/flavormate静态文件/index/index-img/01.png'},
 				],
 				foods: [
@@ -131,6 +130,14 @@
 				uni.navigateTo({
 					url:"/pages/individual/creatMenu/creatMenu"
 				})
+			},
+			toView(){
+				uni.navigateTo({
+					url:"/pages/individual/video/video",
+					animationType:'slide-in-bottom',
+					animationDuration:300
+				})
+				
 			}
 		}
 	}
@@ -138,5 +145,5 @@
 
 <style lang="scss">
 	@import "index.scss";
-	@import url("../../uni_modules/uni-scss/index.scss");
+	// @import url("../../uni_modules/uni-scss/index.scss");
 </style>

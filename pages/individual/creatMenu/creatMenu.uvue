@@ -1,14 +1,51 @@
 <template>
 	<view class="continue">
-		
+		<view class="first">
+			<view class="first-pic">
+				<img src="" alt="" />
+			</view>
+			<view class="first-text">
+				个性定制
+			</view>
+		</view>
+		<view class="second ">
+			<view class="second-main">What would you like to Cook?</view>
+			<view class="second-fu">开启您的私人菜谱定制</view>
+		</view>
+		<button class="third">
+			点击输入食材
+		</button>
+		<view class="forth" >
+			<view class="forth-box"  v-for="item in list">
+				<view class="eng">
+					{{item.eng}}
+				</view>
+				<view class="name">
+					{{item.name}}
+				</view>
+			</view>	
+		</view>
+		<view class="fifth">
+			{{name}}
+		</view>
+		<view class="sixth">
+			<button class="bottom-btn">
+				创建菜单
+			</button>
+		</view>
 	</view>
 </template>
 
 <script>
 	export default {
 		data() {
-			return {
-				
+			return{
+				name:'沙拉轻食',
+				list:[
+					{name:'番茄',eng:'Tamato'},
+					{name:'番茄',eng:'Tamato'},
+					{name:'番茄',eng:'Tamato'},
+				]
 			}
 		},
 		methods: {

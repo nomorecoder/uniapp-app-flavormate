@@ -38,7 +38,7 @@
 					<view class="text">
 						<view class="color-black">{{item.name}}</view>
 						<view class="color-g">{{item.data}}</view>
-						<view class="color-black">{{item.price}}</view>
+						<view class="color-black">￥{{item.price}}</view>
 					</view>
 				</view>
 				<view class="right">
@@ -56,7 +56,7 @@
 		<!-- 底部 -->
 		<view class="box4">
 			<view class="total">
-				总计：{{num}}
+				总计：{{totalCount}}
 			</view>
 			<navigator  >
 			<view class="box4-butten " >
@@ -73,13 +73,12 @@
 		data() {
 			return {
 				name:'草莓燕麦宵夜',
-				num:133,
 				list:[
-					{url:'/static/flavormate静态文件/index/index-img/totalCount/1.png',name:'燕麦麦片',data:'500g*2',price:'$312',num:2},
-					{url:'/static/flavormate静态文件/index/index-img/totalCount/2.png',name:'希腊酸奶',data:'85g',price:'￥25',num:2},
-					{url:'/static/flavormate静态文件/index/index-img/totalCount/3.png',name:'奇亚籽',data:'200g',price:'￥19',num:2},
-					{url:'/static/flavormate静态文件/index/index-img/totalCount/4.png',name:'生鲜奶',data:'1L',price:'￥29',num:2},
-					{url:'/static/flavormate静态文件/index/index-img/totalCount/5.png',name:'蜂蜜',data:'400g',price:'￥45',num:2},	
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/1.png',name:'燕麦麦片',data:'500g*2',price:'312',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/2.png',name:'希腊酸奶',data:'85g',price:'25',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/3.png',name:'奇亚籽',data:'200g',price:'19',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/4.png',name:'生鲜奶',data:'1L',price:'29',num:2},
+					{url:'/static/flavormate静态文件/index/index-img/totalCount/5.png',name:'蜂蜜',data:'400g',price:'45',num:2},	
 					// {url:'/static/flavormate静态文件/index/index-img/totalCount/5.png',name:'蜂蜜',data:'400g',price:'￥45',num:2},
 				]
 			}
@@ -95,6 +94,12 @@
 			},
 			add(item){
 				item.num += 1;
+			}
+		},
+		computed:{
+			totalCount(){
+				let total = this.list.reduce((sum,item)=>sum + item.price*item.num,0)
+				return total
 			}
 		}
 	}
